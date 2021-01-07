@@ -1,2 +1,6 @@
 # SOS2020GB
-Är är kodexemplen jag skapade för SOS202GB lektionerna
+Här är kodexemplen/live kodning jag skapade för SOS202GB lektionerna
+
+* Netflex
+* Elever och lärare
+* Bankkonto
