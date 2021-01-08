@@ -21,7 +21,7 @@
         /// Get account info.
         /// </summary>
         /// <returns>a string with info.</returns>
-        string AccountInfo();
+        string AccountCreate();
 
         /// <summary>
         /// Withdraw money.

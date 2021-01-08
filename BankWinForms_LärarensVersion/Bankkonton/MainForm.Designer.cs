@@ -56,15 +56,16 @@
             this.lsAccounts.TabIndex = 1;
             this.lsAccounts.DoubleClick += new System.EventHandler(this.lsAccounts_DoubleClick);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 358);
             this.Controls.Add(this.lsAccounts);
             this.Controls.Add(this.btAddAccount);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 

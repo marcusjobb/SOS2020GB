@@ -14,12 +14,13 @@
     {
         public MainForm()
         {
+            //AccountData.LoadAccounts();
             InitializeComponent();
         }
 
         private void btAddAccount_Click(object sender, EventArgs e)
         {
-            using (var frm = new AccountInfo())
+            using (var frm = new AccountCreate())
             {
                 frm.ShowDialog();
             }
@@ -28,23 +29,7 @@
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (AccountData.Accounts.Count == 0)
-            {
-                AccountData.Accounts.AddRange(new List<Interfaces.IAccount>
-                {
-                    new SavingAccount     (10000)  { Name="Saving"},
-                    new SavingAccount     (140000) { Name="Saving for a house"},
-                    new SavingAccount     (10)     { Name="Salary"},
-                    new SavingAccount     (1000)   { Name="Månadspizza"},
-                    new InvestmentAccount (1000)   { Name="Investment"},
-                    new Creditcard        (0)      { Name="James", MaxCredit=1500},
-                    new Creditcard        (0)      { Name="Maria", MaxCredit=1500},
-                    new Creditcard        (0)      { Name="Marie", MaxCredit=1500},
-                    new Creditcard        (0)      { Name="Claudia", MaxCredit=1500},
-                });
-
-                RefreshList();
-            }
+            RefreshList();
         }
         private void RefreshList()
         {
@@ -61,6 +46,11 @@
                 frm.ShowDialog();
             }
             RefreshList();
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //AccountData.SaveAccounts();
         }
     }
 }

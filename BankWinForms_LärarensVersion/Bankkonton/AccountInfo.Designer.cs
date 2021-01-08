@@ -1,7 +1,7 @@
 ﻿namespace Bankkonton
 {
 
-    partial class AccountInfo
+    partial class AccountCreate
     {
         /// <summary>
         /// Required designer variable.
@@ -53,6 +53,7 @@
             // 
             // btCancel
             // 
+            this.btCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btCancel.Location = new System.Drawing.Point(507, 41);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(75, 23);
@@ -133,10 +134,11 @@
             this.txCredit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txCredit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txCredit_KeyPress);
             // 
-            // AccountInfo
+            // AccountCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btCancel;
             this.ClientSize = new System.Drawing.Size(599, 187);
             this.Controls.Add(this.txCredit);
             this.Controls.Add(this.lbCredit);
@@ -148,9 +150,13 @@
             this.Controls.Add(this.lbAccountType);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btOK);
-            this.Name = "AccountInfo";
-            this.Text = "AccountInfo";
-            this.Load += new System.EventHandler(this.AccountInfo_Load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "AccountCreate";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "AccountCreate";
+            this.Load += new System.EventHandler(this.AccountCreate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

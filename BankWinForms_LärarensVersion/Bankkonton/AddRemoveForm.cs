@@ -25,7 +25,41 @@
             {
                 MessageBox.Show("Account not selected");
                 Close();
-            }    
+            }
+            else
+            { 
+            txAccountNae.Text = Account.Name;
+            txBalance.Text = Account.Balance.ToString();
+        }
+        }
+
+        private void txDeposit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double.TryParse(txAmount.Text, out double amount);
+                Account.Deposit(amount);
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btWithdraw_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double.TryParse(txAmount.Text, out double amount);
+                Account.Withdraw(amount);
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

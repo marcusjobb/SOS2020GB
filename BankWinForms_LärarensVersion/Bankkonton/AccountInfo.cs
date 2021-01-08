@@ -10,7 +10,7 @@
     using System.Threading.Tasks;
     using System.Windows.Forms;
 
-    public partial class AccountInfo : Form
+    public partial class AccountCreate : Form
     {
 
         private string[] AccountTypes = new string[]
@@ -21,19 +21,19 @@
             "Friends"
         };
 
-        public AccountInfo()
+        public AccountCreate()
         {
             InitializeComponent();
         }
 
-        private void AccountInfo_Load(object sender, EventArgs e)
+        private void AccountCreate_Load(object sender, EventArgs e)
         {
             cbAccountType.Items.AddRange(AccountTypes);
         }
 
         private void txInitialAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ("0123456789".IndexOf(e.KeyChar) < 0)
+            if ("0123456789\b.,".IndexOf(e.KeyChar) < 0)
             {
                 e.Handled = true;
             }
@@ -41,7 +41,7 @@
 
         private void txCredit_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ("0123456789".IndexOf(e.KeyChar) < 0)
+            if ("0123456789\b.,".IndexOf(e.KeyChar) < 0)
             {
                 e.Handled = true;
             }
@@ -85,6 +85,11 @@
                     break;
             }
             Close();
+        }
+
+        internal static void SaveAccounts()
+        {
+            throw new NotImplementedException();
         }
 
         private void btCancel_Click(object sender, EventArgs e)

@@ -38,10 +38,10 @@
         }
 
         /// <summary>
-        /// The AccountInfo.
+        /// The AccountCreate.
         /// </summary>
         /// <returns>The <see cref="string"/>.</returns>
-        public string AccountInfo()
+        public string AccountCreate()
         {
             return $"Account name:{Name}, Balance {Balance}:-";
         }
@@ -74,7 +74,7 @@
 
         public override string ToString()
         {
-            return AccountInfo();   
+            return AccountCreate();   
         }
     }
 }

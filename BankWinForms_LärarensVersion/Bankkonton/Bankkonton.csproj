@@ -62,11 +62,11 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="AddRemoveForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="AddRemoveForm.Designer.cs">
+      <DependentUpon>AddRemoveForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IAccount.cs" />
     <Compile Include="Models\Creditcard.cs" />
@@ -80,8 +80,8 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="AddRemoveForm.resx">
+      <DependentUpon>AddRemoveForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
