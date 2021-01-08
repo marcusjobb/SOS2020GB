@@ -33,7 +33,7 @@
             this.btWithdraw = new System.Windows.Forms.Button();
             this.lbAccountName = new System.Windows.Forms.Label();
             this.lbBalance = new System.Windows.Forms.Label();
-            this.txAccountNae = new System.Windows.Forms.TextBox();
+            this.txAccountName = new System.Windows.Forms.TextBox();
             this.txBalance = new System.Windows.Forms.TextBox();
             this.txAmount = new System.Windows.Forms.TextBox();
             this.btAmount = new System.Windows.Forms.Label();
@@ -78,13 +78,12 @@
             this.lbBalance.TabIndex = 3;
             this.lbBalance.Text = "Balance";
             // 
-            // txAccountNae
+            // txAccountName
             // 
-            this.txAccountNae.Enabled = false;
-            this.txAccountNae.Location = new System.Drawing.Point(65, 9);
-            this.txAccountNae.Name = "txAccountNae";
-            this.txAccountNae.Size = new System.Drawing.Size(163, 20);
-            this.txAccountNae.TabIndex = 4;
+            this.txAccountName.Location = new System.Drawing.Point(65, 9);
+            this.txAccountName.Name = "txAccountName";
+            this.txAccountName.Size = new System.Drawing.Size(163, 20);
+            this.txAccountName.TabIndex = 4;
             // 
             // txBalance
             // 
@@ -132,7 +131,7 @@
             this.Controls.Add(this.txAmount);
             this.Controls.Add(this.btAmount);
             this.Controls.Add(this.txBalance);
-            this.Controls.Add(this.txAccountNae);
+            this.Controls.Add(this.txAccountName);
             this.Controls.Add(this.lbBalance);
             this.Controls.Add(this.lbAccountName);
             this.Controls.Add(this.btWithdraw);
@@ -156,7 +155,7 @@
         private System.Windows.Forms.Button btWithdraw;
         private System.Windows.Forms.Label lbAccountName;
         private System.Windows.Forms.Label lbBalance;
-        private System.Windows.Forms.TextBox txAccountNae;
+        private System.Windows.Forms.TextBox txAccountName;
         private System.Windows.Forms.TextBox txBalance;
         private System.Windows.Forms.TextBox txAmount;
         private System.Windows.Forms.Label btAmount;

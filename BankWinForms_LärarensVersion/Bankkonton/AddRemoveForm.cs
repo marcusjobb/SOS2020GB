@@ -21,16 +21,16 @@
 
         private void fmAddRemove_Load(object sender, EventArgs e)
         {
-            if (Account==null)
+            if (Account == null)
             {
                 MessageBox.Show("Account not selected");
                 Close();
             }
             else
-            { 
-            txAccountNae.Text = Account.Name;
-            txBalance.Text = Account.Balance.ToString();
-        }
+            {
+                txAccountName.Text = Account.Name;
+                txBalance.Text = Account.Balance.ToString();
+            }
         }
 
         private void txDeposit_Click(object sender, EventArgs e)
@@ -39,6 +39,7 @@
             {
                 double.TryParse(txAmount.Text, out double amount);
                 Account.Deposit(amount);
+                Account.Name = txAccountName.Text;
                 Close();
             }
             catch (Exception ex)
@@ -52,6 +53,7 @@
             try
             {
                 double.TryParse(txAmount.Text, out double amount);
+                Account.Name = txAccountName.Text;
                 Account.Withdraw(amount);
                 Close();
             }

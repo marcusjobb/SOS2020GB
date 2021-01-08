@@ -39,7 +39,7 @@
 
         private void lsAccounts_DoubleClick(object sender, EventArgs e)
         {
-            var account = (Interfaces.IAccount)lsAccounts.SelectedItem;
+            var account = lsAccounts.SelectedItem as Interfaces.IAccount;
             using (var frm = new AddRemoveForm())
             {
                 frm.Account = account;
