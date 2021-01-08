@@ -1,16 +1,15 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Bankkonton")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Exempelkod för studenter på SOS20GB")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Bankkonton")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
+[assembly: AssemblyCopyright("Copyright ©  2021, Marcus Medina @ Codic Education")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

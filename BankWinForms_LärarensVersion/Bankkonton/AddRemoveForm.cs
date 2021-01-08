@@ -1,24 +1,31 @@
 ﻿namespace Bankkonton
 {
     using System;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.Data;
-    using System.Drawing;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using System.Windows.Forms;
 
+    /// <summary>
+    /// Defines the <see cref="AddRemoveForm" />.
+    /// </summary>
     public partial class AddRemoveForm : Form
     {
+        /// <summary>
+        /// Gets or sets the Account.
+        /// </summary>
         public Interfaces.IAccount Account { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AddRemoveForm"/> class.
+        /// </summary>
         public AddRemoveForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This happens before the form is loaded.
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/>.</param>
+        /// <param name="e">The e<see cref="EventArgs"/>.</param>
         private void fmAddRemove_Load(object sender, EventArgs e)
         {
             if (Account == null)
@@ -33,6 +40,11 @@
             }
         }
 
+        /// <summary>
+        /// This happens when the deposit button is clicked.
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/>.</param>
+        /// <param name="e">The e<see cref="EventArgs"/>.</param>
         private void txDeposit_Click(object sender, EventArgs e)
         {
             try
@@ -48,6 +60,11 @@
             }
         }
 
+        /// <summary>
+        /// This happens when the withdraw button is clicked.
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/>.</param>
+        /// <param name="e">The e<see cref="EventArgs"/>.</param>
         private void btWithdraw_Click(object sender, EventArgs e)
         {
             try
@@ -61,7 +78,6 @@
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
     }
 }

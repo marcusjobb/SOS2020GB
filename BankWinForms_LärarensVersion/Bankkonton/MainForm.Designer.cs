@@ -49,10 +49,12 @@
             this.lsAccounts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lsAccounts.ColumnWidth = 45;
             this.lsAccounts.FormattingEnabled = true;
             this.lsAccounts.Location = new System.Drawing.Point(14, 12);
             this.lsAccounts.Name = "lsAccounts";
             this.lsAccounts.Size = new System.Drawing.Size(396, 329);
+            this.lsAccounts.Sorted = true;
             this.lsAccounts.TabIndex = 1;
             this.lsAccounts.DoubleClick += new System.EventHandler(this.lsAccounts_DoubleClick);
             // 

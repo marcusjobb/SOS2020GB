@@ -13,7 +13,7 @@
         /// <summary>
         /// Gets the Balance.
         /// </summary>
-        public double Balance { get; private set; }
+        public double Balance { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SavingAccount"/> class.
@@ -28,7 +28,11 @@
         /// <param name="initialBalance">The initialBalance<see cref="double"/>.</param>
         public SavingAccount(double initialBalance)
         {
-            if (initialBalance <= 0) throw new System.Exception("amount too small");
+            if (initialBalance <= 0)
+            {
+                throw new System.Exception("amount too small");
+            }
+
             Balance = initialBalance;
         }
 
@@ -36,7 +40,7 @@
         /// The AccountCreate.
         /// </summary>
         /// <returns>The <see cref="string"/>.</returns>
-        public string AccountCreate()
+        public string AccountInfo()
         {
             return $"Account name:{Name}, Balance {Balance}:-";
         }
@@ -48,7 +52,11 @@
         /// <returns>The <see cref="double"/>.</returns>
         public double Deposit(double amount)
         {
-            if (amount <= 0) throw new System.Exception("amount too small");
+            if (amount <= 0)
+            {
+                throw new System.Exception("amount too small");
+            }
+
             Balance += amount;
             return Balance;
         }
@@ -60,8 +68,15 @@
         /// <returns>The <see cref="double"/>.</returns>
         public double Withdraw(double amount)
         {
-            if (amount <= 0) throw new System.Exception("amount too small");
-            if (amount > Balance) throw new System.Exception("no credit for you!");
+            if (amount <= 0)
+            {
+                throw new System.Exception("amount too small");
+            }
+
+            if (amount > Balance)
+            {
+                throw new System.Exception("no credit for you!");
+            }
 
             Balance -= amount;
             return Balance;
@@ -69,8 +84,8 @@
 
         public override string ToString()
         {
-            return AccountCreate();
-        }
+            return $"{Name} {Balance}, credit = {0}";
 
+        }
     }
 }

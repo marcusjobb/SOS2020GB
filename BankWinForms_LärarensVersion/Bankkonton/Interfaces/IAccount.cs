@@ -15,13 +15,13 @@
         /// Gets the Balance
         /// The money!.
         /// </summary>
-        double Balance { get; }
+        double Balance { get; set; }
 
         /// <summary>
         /// Get account info.
         /// </summary>
         /// <returns>a string with info.</returns>
-        string AccountCreate();
+        string AccountInfo();
 
         /// <summary>
         /// Withdraw money.

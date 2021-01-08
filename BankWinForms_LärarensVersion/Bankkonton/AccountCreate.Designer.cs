@@ -1,10 +1,12 @@
 ﻿namespace Bankkonton
 {
-
-    partial class AccountCreate
+    /// <summary>
+    /// Defines the <see cref="AccountCreate" />.
+    /// </summary>
+    public partial class AccountCreate
     {
         /// <summary>
-        /// Required designer variable.
+        /// Required designer variable..
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
@@ -20,8 +22,6 @@
             }
             base.Dispose(disposing);
         }
-
-        #region Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -159,20 +159,56 @@
             this.Load += new System.EventHandler(this.AccountCreate_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
-        #endregion
-
+        /// <summary>
+        /// Defines the btOK.
+        /// </summary>
         private System.Windows.Forms.Button btOK;
+
+        /// <summary>
+        /// Defines the btCancel.
+        /// </summary>
         private System.Windows.Forms.Button btCancel;
+
+        /// <summary>
+        /// Defines the lbAccountType.
+        /// </summary>
         private System.Windows.Forms.Label lbAccountType;
+
+        /// <summary>
+        /// Defines the cbAccountType.
+        /// </summary>
         private System.Windows.Forms.ComboBox cbAccountType;
+
+        /// <summary>
+        /// Defines the lbAccountName.
+        /// </summary>
         private System.Windows.Forms.Label lbAccountName;
+
+        /// <summary>
+        /// Defines the txAccountName.
+        /// </summary>
         private System.Windows.Forms.TextBox txAccountName;
+
+        /// <summary>
+        /// Defines the lbInitialBalance.
+        /// </summary>
         private System.Windows.Forms.Label lbInitialBalance;
+
+        /// <summary>
+        /// Defines the txInitialAmount.
+        /// </summary>
         private System.Windows.Forms.TextBox txInitialAmount;
+
+        /// <summary>
+        /// Defines the lbCredit.
+        /// </summary>
         private System.Windows.Forms.Label lbCredit;
+
+        /// <summary>
+        /// Defines the txCredit.
+        /// </summary>
         private System.Windows.Forms.TextBox txCredit;
     }
 }
