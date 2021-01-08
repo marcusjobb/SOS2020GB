@@ -21,8 +21,6 @@
             "Friends"
         };
 
-        //public Interfaces.IAccount Account { get; set; }
-
         public AccountInfo()
         {
             InitializeComponent();
@@ -35,7 +33,7 @@
 
         private void txInitialAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ("0123456789\b,.".IndexOf(e.KeyChar) < 0)
+            if ("0123456789".IndexOf(e.KeyChar) < 0)
             {
                 e.Handled = true;
             }
@@ -43,7 +41,7 @@
 
         private void txCredit_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ("0123456789\b,.".IndexOf(e.KeyChar) < 0)
+            if ("0123456789".IndexOf(e.KeyChar) < 0)
             {
                 e.Handled = true;
             }
