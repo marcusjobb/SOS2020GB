@@ -4,7 +4,6 @@
 
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Windows.Forms;
 
     /// <summary>
@@ -63,7 +62,7 @@
         }
 
         /// <summary>
-        /// OK button click handler
+        /// OK button click handler.
         /// </summary>
         /// <param name="sender">The sender<see cref="object"/>.</param>
         /// <param name="e">The e<see cref="EventArgs"/>.</param>
@@ -85,6 +84,7 @@
                     }
                    );
                     break;
+
                 case AccountTypes.InvestmentAccount:
                     AppData.Accounts.Add(new InvestmentAccount
                    (initBalance)
@@ -93,6 +93,7 @@
                     }
                    );
                     break;
+
                 case AccountTypes.CreditCard:
                     AppData.Accounts.Add(new Creditcard
                    (initBalance)
@@ -102,6 +103,7 @@
                     }
                    );
                     break;
+
                 case AccountTypes.Friends:
                     AppData.Accounts.Add(new Friend
                    (initBalance)
@@ -111,6 +113,7 @@
                     }
                    );
                     break;
+
                 default:
                     break;
             }

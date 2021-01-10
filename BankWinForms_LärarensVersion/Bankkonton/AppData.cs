@@ -3,7 +3,6 @@
     using Bankkonton.Enummerators;
     using Bankkonton.Interfaces;
 
-    using System;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -18,7 +17,7 @@
         public static List<Interfaces.IAccount> Accounts = new List<Interfaces.IAccount>();
 
         /// <summary>
-        /// Load the accounts
+        /// Load the accounts.
         /// </summary>
         internal static void LoadAccounts()
         {
@@ -44,7 +43,7 @@
 
             if (Accounts.Count == 0)
             {
-                Accounts=new List<IAccount>
+                Accounts = new List<IAccount>
                 {
                     new SavingAccount     (10000)  { Name="Saving"},
                     new SavingAccount     (140000) { Name="Saving for a house"},
@@ -59,7 +58,6 @@
                     new Creditcard        (1200)   { Name = "American Express", MaxCredit = 15000 },
             };
             }
-
         }
 
         /// <summary>

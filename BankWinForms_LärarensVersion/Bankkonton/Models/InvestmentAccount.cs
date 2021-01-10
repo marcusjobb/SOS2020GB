@@ -11,9 +11,10 @@
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets the Balance.
+        /// Gets or sets the Balance
+        /// Gets the Balance..
         /// </summary>
-        public double Balance { get;  set; }
+        public double Balance { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="InvestmentAccount"/> class.
@@ -82,6 +83,10 @@
             return Balance;
         }
 
+        /// <summary>
+        /// The ToString.
+        /// </summary>
+        /// <returns>The <see cref="string"/>.</returns>
         public override string ToString()
         {
             return $"{Name} {Balance}, credit = {0}";

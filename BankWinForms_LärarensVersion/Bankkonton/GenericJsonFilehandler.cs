@@ -1,21 +1,39 @@
-﻿using Newtonsoft.Json;
-
-using System;
-using System.Diagnostics;
-using System.IO;
-
-namespace Bankkonton
+﻿namespace Bankkonton
 {
+    using Newtonsoft.Json;
+
+    using System;
+    using System.Diagnostics;
+    using System.IO;
+
+    /// <summary>
+    /// Defines the <see cref="GenericJsonFilehandler{T}" />.
+    /// </summary>
+    /// <typeparam name="T">.</typeparam>
     public class GenericJsonFilehandler<T>
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GenericJsonFilehandler{T}"/> class.
+        /// </summary>
+        /// <param name="filename">The filename<see cref="string"/>.</param>
         public GenericJsonFilehandler(string filename)
         {
             Filename = filename;
         }
 
+        /// <summary>
+        /// Gets or sets the Data.
+        /// </summary>
         public T Data { get; set; } = default;
+
+        /// <summary>
+        /// Gets or sets the Filename.
+        /// </summary>
         public string Filename { get; set; } = "";
 
+        /// <summary>
+        /// The Load.
+        /// </summary>
         public void Load()
         {
             string data = string.Empty;
@@ -41,6 +59,9 @@ namespace Bankkonton
             }
         }
 
+        /// <summary>
+        /// The Save.
+        /// </summary>
         public void Save()
         {
             File.WriteAllText(

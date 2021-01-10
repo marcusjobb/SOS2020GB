@@ -6,14 +6,14 @@
     internal class Friend : Interfaces.IAccount
     {
         /// <summary>
-        /// Gets or sets the Name.
+        /// Gets or sets the Name of the account.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets the Balance.
+        /// Gets or sets the Balance
         /// </summary>
-        public double Balance { get;  set; }
+        public double Balance { get; set; }
 
         /// <summary>
         /// Gets or sets the MaxCredit.
@@ -87,6 +87,10 @@
             return Balance;
         }
 
+        /// <summary>
+        /// The ToString.
+        /// </summary>
+        /// <returns>The <see cref="string"/>.</returns>
         public override string ToString()
         {
             return $"{Name} {Balance}, credit = {MaxCredit}";
